@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  color: #fff;
+  font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+a {
+  color: inherit;
+
+  &:active {
+    color: inherit;
+  }
+
+  &:hover {
+    color: #22b6ed;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
