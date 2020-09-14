@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #374046;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  background-color: #3e464c;
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .current-color {
+    span {
+      margin-left: 5px;
+      border-radius: 4px;
+      padding: 0 5px;
+    }
+  }
+}
+
+.colors {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.card {
+  color: #0a2051;
+
+  .card-body {
+    text-align: center;
+    padding: 40px 0 45px;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    position: relative;
+
+    .name {
+      font: normal bold 22px Simsun;
+    }
+
+    .copy {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      border-radius: 4px;
+      padding: 2px 10px;
+      border: 1px solid;
+      font-size: 14px;
+      opacity: 0;
+      transform: scale(0.5);
+      margin-left: -28px;
+      transition: 0.2s;
+    }
+
+    &:hover {
+      .copy {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  &.light {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    padding: 0 10px;
+
+    h1 {
+      font-size: 16px;
+    }
+
+    .current-color,
+    &>span {
+      display: none;
+    }
+  }
+}

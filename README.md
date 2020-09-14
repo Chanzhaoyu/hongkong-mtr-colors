@@ -2,7 +2,7 @@
   Hong Kong MTR Colours
 </h1>
 
-![](page.png)
+![](page.jpg)
 
 
 ## Project Run
