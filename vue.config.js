@@ -1,7 +1,7 @@
 module.exports = {
   publicPath:
     process.env.NODE_ENV === 'production' ? '/hongkong-mtr-colours/' : '/',
-  outputDir: 'dist',
+  outputDir: 'docs',
   assetsDir: 'static',
   productionSourceMap: false,
   devServer: {
